@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Windows device name that can break git on Windows
 nul
+
+# backup git folder
+.git.backup
