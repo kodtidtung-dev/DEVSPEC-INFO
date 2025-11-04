@@ -115,7 +115,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             <input
               type="text"
               id="name"
-              placeholder="John Doe"
+              placeholder="your name"
               value={formData.name}
               onChange={(e) => handleChange('name', e.target.value)}
               disabled={isSubmitting}
@@ -135,7 +135,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             <input
               type="email"
               id="email"
-              placeholder="john@example.com"
+              placeholder="email@example.com"
               value={formData.email}
               onChange={(e) => handleChange('email', e.target.value)}
               disabled={isSubmitting}
@@ -155,7 +155,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
             <textarea
               id="message"
               rows={6}
-              placeholder="Tell me about your project..."
+              placeholder="Typing your message here..."
               value={formData.message}
               onChange={(e) => handleChange('message', e.target.value)}
               disabled={isSubmitting}

@@ -7,6 +7,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { Github, ExternalLink } from 'lucide-react';
 import { ProjectFlipCardProps } from './types';
 import { cardVariants, flipFrontVariants, flipBackVariants, buttonHoverVariants } from './utils/animations';
@@ -87,13 +88,16 @@ export function ProjectFlipCard({ project, delay = 0, className = '' }: ProjectF
                 className="glass absolute inset-0 overflow-hidden rounded-2xl border border-white/10 p-6 shadow-lg"
                 style={{ backfaceVisibility: 'hidden' }}
               >
-                {/* Image Placeholder */}
-                <div className="relative mb-4 aspect-4/3 overflow-hidden rounded-xl bg-linear-to-br from-accent-red/15 to-accent-red/8">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="select-none text-[100px] font-bold leading-none text-text-secondary/20 sm:text-[120px]">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
+                {/* Project Image */}
+                <div className="relative mb-4 aspect-4/3 overflow-hidden rounded-xl">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} image`}
+                    fill
+                    className="object-cover"
+                    unoptimized={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
 
                 {/* Title */}

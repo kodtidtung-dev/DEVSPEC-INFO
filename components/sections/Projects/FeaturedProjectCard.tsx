@@ -6,6 +6,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Github, ExternalLink } from 'lucide-react';
 import { FeaturedProjectCardProps } from './types';
 import { cardVariants, featuredCardHoverVariants, buttonHoverVariants } from './utils/animations';
@@ -26,13 +27,15 @@ export function FeaturedProjectCard({ project, delay = 0, className = '' }: Feat
         whileHover="hover"
         className="glass group relative h-full overflow-hidden rounded-2xl border border-white/10 p-8 shadow-lg transition-shadow hover:shadow-[0_0_30px_rgba(255,51,51,0.5)]"
       >
-        {/* Project Image Placeholder */}
-        <div className="relative mb-6 aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br from-accent-red/20 to-accent-red/5">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="select-none text-[120px] font-bold leading-none text-text-secondary/20 sm:text-[150px] md:text-[180px]">
-              {project.title.charAt(0)}
-            </span>
-          </div>
+        {/* Project Image (Stock1.png) */}
+        <div className="relative mb-6 aspect-4/3 overflow-hidden rounded-xl bg-linear-to-br from-accent-red/20 to-accent-red/5">
+          <Image
+            src="/Stock1.png"
+            alt={`${project.title} image`}
+            fill
+            className="object-cover"
+            priority={true}
+          />
           {/* Featured badge */}
           <div className="absolute right-4 top-4 rounded-full bg-accent-red px-4 py-2 text-sm font-semibold text-white">
             Featured

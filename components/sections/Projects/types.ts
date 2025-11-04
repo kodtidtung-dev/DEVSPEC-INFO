@@ -142,7 +142,7 @@ export function isProject(obj: unknown): obj is Project {
     Array.isArray(project?.technologies) &&
     project.technologies.every(isTechnology) &&
     typeof project?.image === 'string' &&
-    project.image.startsWith('/projects/') &&
+    (project.image.startsWith('/projects/') || project.image.startsWith('/')) &&
     typeof project?.githubUrl === 'string' &&
     project.githubUrl.startsWith('https://github.com/') &&
     (project?.liveUrl === null ||
