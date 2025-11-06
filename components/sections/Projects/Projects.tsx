@@ -102,7 +102,7 @@ export function Projects() {
         </motion.div>
 
         {/* View All Projects CTA (full-width below grid) */}
-  <div className="mt-20 md:mt-8 pt-8 md:pt-0 border-t border-white/10 md:border-t-0">
+        <div className="mt-12 md:mt-8 pt-8 border-t border-white/10 md:border-t-0 md:pt-0">
           <motion.div
             variants={scrollRevealVariants}
             initial="hidden"

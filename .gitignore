@@ -45,3 +45,12 @@ nul
 
 # backup git folder
 .git.backup
+
+# documentation files
+*.md
+*.MD
+
+# specs and configuration directories
+specs/
+.specify/
+.claude/

@@ -53,7 +53,7 @@ export const projects: Project[] = [
     ],
     image: '/dorm-management.png',
     githubUrl: 'https://github.com/kodtidtung-dev/dorm-management',
-    liveUrl: null,
+    liveUrl: 'https://dorm-management-ten.vercel.app/login',
     featured: false,
   },
 ];
