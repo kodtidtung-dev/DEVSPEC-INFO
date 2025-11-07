@@ -79,7 +79,7 @@ export function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid grid-cols-1 gap-10 md:gap-8 lg:grid-cols-[60%_40%] pb-8 md:pb-0"
+          className="grid grid-cols-1 gap-10 md:gap-8 lg:grid-cols-[60%_40%]"
         >
           {/* Featured Project */}
           {featuredProject && (
@@ -99,10 +99,9 @@ export function Projects() {
             ))}
 
           </div>
-        </motion.div>
 
-        {/* View All Projects CTA (full-width below grid) */}
-        <div className="mt-12 md:mt-8 pt-8 border-t border-white/10 md:border-t-0 md:pt-0">
+          {/* View All Projects CTA (full-width below grid) */}
+          <div className="col-span-full mt-4 md:mt-0 pt-4 border-t border-white/10 md:border-t-0 md:pt-0">
           <motion.div
             variants={scrollRevealVariants}
             initial="hidden"
@@ -140,7 +139,8 @@ export function Projects() {
               </motion.div>
             </Link>
           </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
